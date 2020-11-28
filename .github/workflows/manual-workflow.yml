@@ -1,0 +1,27 @@
+name: Manual workflow
+
+
+
+on:
+  workflow_dispatch:
+
+
+
+jobs:
+  build:
+    name: Coverity Scan
+    runs-on: ubuntu-20.04
+    container: ubuntu:20.04
+
+
+
+    ###
+    ### Steps to run
+    ###
+    steps:
+
+
+
+      ### Install build environment tools
+      #
+      - run: echo Hello manual
