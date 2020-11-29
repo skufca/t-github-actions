@@ -1,54 +1,16 @@
 name: Automated Workflow
 
-
-
 on:
+  workflow_dispatch:
+    branches:
+      - master
+#      - install
   push:
     branches:
       - master
-    tags:
-      - '*'
-    paths-ignore:
-      - '.github/*.md'
-      - '.gitignore'
-      - 'ChangeLog'
-      - 'COPYING'
-      - 'configure.scan'
-      - 'contrib/**'
-      - 'dev-tools/**'
-      - '!dev-tools/libexec/get-release-*.sh'
-      - 'doc/**'
-      - 'etc/**'
-      - 'install/**'
-      - 'lib/*/IMPORT.defs'
-      - 'lib/*/LICENSE'
-      - 'README.md'
-
-
-
 jobs:
   build:
-
-    name: Build on ${{matrix.container }}
+    name: Hello from automated workflow
     runs-on: ubuntu-20.04
-
-
-
-    ### Define the list of container images
-    #
-    container: ${{ matrix.container }}
-    strategy:
-      matrix:
-        container:
-          - ubuntu:18.04
-
-
-
-    ###
-    ### Steps to run
-    ###
     steps:
-
-
-
       - run: echo Hello
