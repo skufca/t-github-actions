@@ -7,6 +7,7 @@ Tag from this repo:
 ![Automated Workflow](https://github.com/bostjan/t-github-actions/workflows/Automated%20Workflow/badge.svg?branch=tag3)
 
 
+test2
 
 
 https://git.io/JkN7z
