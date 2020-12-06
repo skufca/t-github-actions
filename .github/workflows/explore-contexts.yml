@@ -30,3 +30,16 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
+
+
+      # Debian / Ubuntu
+      - run: |
+          DEBIAN_FRONTEND=noninteractive apt-get update -y
+          DEBIAN_FRONTEND=noninteractive apt-get install -y git
+
+
+      ### Fetch the code
+      #
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
